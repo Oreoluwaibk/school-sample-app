@@ -1,0 +1,1 @@
+export { default as LogoNoBackground } from "./logo-no-background.svg"
