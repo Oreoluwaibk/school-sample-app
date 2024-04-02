@@ -10,7 +10,7 @@ import Link from 'next/link';
 const Header = () => {
     const router = useRouter();
   return (
-    <div className="static w-full top-0 flex items-center h-20 bg-secondary px-16 justify-between">
+    <div className="sticky w-full top-0 flex items-center h-20 bg-secondary px-16 justify-between z-10">
         <div className="logo">
             <Link href="/">
                 <Image 
