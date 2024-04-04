@@ -9,7 +9,7 @@ type smallCard = {
 const SmallCards = ({ title, image }: smallCard) => {
   return (
     <div 
-        className="bg-primary transition-opacity duration-1000 hover:opacity-60 flex flex-col justify-center items-center gap-4 p-8"
+        className="bg-primary transition-opacity duration-1000 hover:opacity-60 flex flex-col justify-center items-center gap-4 p-8 w-full"
         style={{height: 250}}
     >
         <Image 

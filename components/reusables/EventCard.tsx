@@ -13,7 +13,7 @@ const EventCard = ({ image, date, time, title }: eventCard) => {
   return (
     <div
         style={{height: 500}}
-        className="flex flex-col shadow-md transition-all duration-[1s] ease-linear hover:shadow-2xl rounded-sm w-1/3"
+        className="flex flex-col shadow-md transition-all duration-[1s] ease-linear hover:shadow-2xl rounded-sm w-full md:w-1/3"
     >
         <div className="relative">
             <Image 
@@ -24,7 +24,7 @@ const EventCard = ({ image, date, time, title }: eventCard) => {
                 // width={200}
                 // height={200}
             />
-            <p className="absolute bottom-1 left-0 p-4 font-bold text-2xl text-secondary" style={{backgroundColor: "rgba(90,146,197,0.5)"}}>{date}</p>
+            <p className="absolute bottom-1 left-3 md:left-0 p-4 font-bold text-2xl text-secondary" style={{backgroundColor: "rgba(90,146,197,0.5)"}}>{date}</p>
         </div>
         <div
             className="flex flex-col items-center justify-between h-full py-4"

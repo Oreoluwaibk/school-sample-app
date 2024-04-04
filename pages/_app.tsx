@@ -7,7 +7,7 @@ import theme from "@/theme/themeConfig";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ConfigProvider theme={theme}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </ConfigProvider>
   )
 }

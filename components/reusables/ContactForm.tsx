@@ -4,51 +4,65 @@ import PhoneInput from 'react-phone-input-2';
 import "react-phone-input-2/lib/style.css";
 
 const FormItem = Form.Item;
-type contact = {
-    title: string;
-}
-const ContactForm = ({ title }: contact) => {
+
+
+const ContactForm = () => {
 
     const handleSubmit = () => {
 
     }
+
   return (
 
     <div>
-        <p className="font-bold text-primary">{title}</p>
          <Form
             layout="vertical"
             onFinish={handleSubmit}
+            
         >
-            <FormItem
-                name="name"
-                rules={[{required: true, message: "please enter your full name"}]}
+            <div className="flex items-start g-4">
+                <FormItem
+                    name="first_name"
+                    rules={[{required: true, message: "please enter your first name"}]}
+                    className="w-1/2"
                 >
-                <Input placeholder="Full name" />
-            </FormItem>
+                    <Input placeholder="First name"  size="large" />
+                </FormItem>
 
-            <FormItem
-                name="email"
-                rules={[{required: true, message: "please enter your mail"}]}
+                <FormItem
+                    name="last_name"
+                    rules={[{required: true, message: "please enter your last name"}]}
+                    className="w-1/2"
                 >
-                <Input placeholder="Email" />
-            </FormItem>
+                    <Input placeholder="Last name"  size="large"/>
+                </FormItem>
+            </div>
+            
+            <div>
+                <FormItem
+                    name="email"
+                    rules={[{required: true, message: "please enter your mail"}]}
+                    className="w-1/2"
+                >
+                    <Input placeholder="Email"  size="large"/>
+                </FormItem>
 
-            <FormItem
-                name="phone_number"
-                rules={[{required: true, message: "please enter your phone number"}]}
+                <FormItem
+                    name="phone_number"
+                    rules={[{required: true, message: "please enter your phone number"}]}
                 >
-                <PhoneInput 
-                    country="us"
-                    placeholder='Phone'
-                />
-            </FormItem>
+                    <PhoneInput 
+                        country="us"
+                        placeholder='Phone'
+                    />
+                </FormItem>
+            </div>
 
             <FormItem
                 name="message"
                 rules={[{required: true, message: "please enter your mail"}]}
                 >
-                <Input.TextArea placeholder="message" cols={5}/>
+                <Input.TextArea placeholder="message" cols={10} rows={10} size="large"/>
             </FormItem>
             
             <FormItem>
