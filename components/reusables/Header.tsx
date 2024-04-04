@@ -33,6 +33,11 @@ const Header = () => {
                 </Link>
             </li>
             <li>
+                <Link href="/enroll" className="text-primary text-lg font-semibold transition-opacity duration-1000 hover:opacity-50">
+                    Enroll
+                </Link>
+            </li>
+            <li>
                 <Link href="/events" className="text-primary text-lg font-semibold transition-opacity duration-1000 hover:opacity-50">
                     Events
                 </Link>

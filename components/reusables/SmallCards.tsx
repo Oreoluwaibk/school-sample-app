@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 type smallCard = {
@@ -8,9 +9,14 @@ type smallCard = {
 const SmallCards = ({ title, image }: smallCard) => {
   return (
     <div 
-        className="h-40 bg-primary transition-opacity duration-1000 hover:opacity-60"
+        className="bg-primary transition-opacity duration-1000 hover:opacity-60 flex flex-col justify-center items-center gap-4 p-8"
+        style={{height: 250}}
     >
-        
+        <Image 
+          src={image}
+          alt={title}
+        />
+        <p className="text-secondary font-bold text-2xl">{title}</p>
     </div>
   )
 }
